@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css';
+import constataredaunaauto from '../assets/gallery/constatare-dauna-auto.webp';
+import documents from '../assets/gallery/documents.webp';
 ---
 
 <html lang="ro">
@@ -46,7 +48,7 @@ import '../styles/global.css';
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         <!-- LOGO -->
         <a href="/" class="flex items-center space-x-2">
-            <img src="/src/assets/logo.jpeg" alt="Centrul De Daune Cluj Logo" class="h-10 w-auto" />
+            <img src="/assets/logo.jpeg" alt="Centrul De Daune Cluj Logo" class="h-10 w-auto" loading="lazy" decoding="async"/>
             <span class="font-bold text-lg text-blue-900">Centrul De Daune Cluj</span>
         </a>
 
@@ -104,6 +106,13 @@ import '../styles/global.css';
 <!-- Hero Section -->
 <section class="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-28 px-4 text-center">
     <h1 class="text-4xl sm:text-5xl font-extrabold mb-6 animate-fadeInDown">Constatare Daune Auto în Cluj-Napoca – RCA & CASCO</h1>
+    <p class="text-lg sm:text-xl mb-8 max-w-3xl mx-auto">
+        Dacă ai fost implicat într-un accident rutier în Cluj-Napoca,
+        procesul de constatare a daunelor auto este primul pas pentru
+        deschiderea dosarului RCA sau CASCO și obținerea despăgubirii.
+        Centrul de Daune Cluj te ajută să gestionezi rapid procedura,
+        de la constatare până la reparația mașinii.
+    </p>
     <p class="text-lg sm:text-xl mb-8 max-w-3xl mx-auto animate-fadeInUp">
         Gestionăm constatarea fizică a daunelor auto în Cluj-Napoca,
         întocmirea dosarului RCA sau CASCO și colaborarea cu asiguratorii.
@@ -117,12 +126,28 @@ import '../styles/global.css';
 
     <!-- Ce este constatarea daunelor -->
     <div class="grid md:grid-cols-2 gap-12 items-center">
-        <img src="/images/constatare-daune.jpg" alt="Constatare Daune Auto Cluj" class="rounded-xl shadow-lg transform transition duration-500 hover:scale-105" />
+
+        <img
+                src={constataredaunaauto.src}
+                alt="Constatare Daune Auto Cluj"
+                class="max-w-md w-full rounded-xl shadow-lg transform transition duration-500 hover:scale-105"
+                loading="lazy"
+                decoding="async"
+        />
+
         <div>
             <h2 class="text-3xl font-bold mb-4">Ce înseamnă constatarea daunelor auto?</h2>
-            <p class="text-gray-700 mb-4">Constatarea daunelor auto este evaluarea pagubelor rezultate după un accident rutier. Este obligatorie pentru deschiderea dosarului RCA sau CASCO și trebuie realizată corect pentru a obține despăgubirea completă.</p>
-            <p class="text-gray-700">Noi vom întocmi raportul oficial și te ghidăm pas cu pas, astfel încât procesul să fie simplu și fără stres.</p>
+            <p class="text-gray-700 mb-4">
+                Constatarea daunelor auto este evaluarea pagubelor rezultate după un accident rutier.
+                Este obligatorie pentru deschiderea dosarului RCA sau CASCO și trebuie realizată corect
+                pentru a obține despăgubirea completă.
+            </p>
+            <p class="text-gray-700">
+                Noi vom întocmi raportul oficial și te ghidăm pas cu pas, astfel încât procesul să fie
+                simplu și fără stres.
+            </p>
         </div>
+
     </div>
     <!-- RCA vs CASCO -->
     <div class="grid md:grid-cols-2 gap-12 items-center">
@@ -145,6 +170,11 @@ import '../styles/global.css';
                 La Centrul de Daune Auto Cluj te ghidăm complet, indiferent de
                 asigurator sau tipul poliței.
             </p>
+            <div class="text-gray-700">
+                Vezi aici <a href="/intocmire-dosar-dauna-cluj" class="text-blue-600 underline">
+                întocmirea dosarului de daună
+            </a>
+            </div>
         </div>
 
         <div class="bg-white p-8 rounded-xl shadow-lg">
@@ -154,6 +184,7 @@ import '../styles/global.css';
                 fără costuri pentru tine.
             </p>
         </div>
+
     </div>
 
     <!-- Pași constatare cu carduri hover -->
@@ -161,7 +192,7 @@ import '../styles/global.css';
         <div class="bg-white p-6 rounded-xl shadow-lg transform transition duration-500 hover:scale-105 hover:shadow-2xl text-center">
             <span class="text-blue-700 text-3xl font-bold mb-2 inline-block">1</span>
             <h3 class="font-semibold mb-2">Contactează-ne</h3>
-            <p class="text-gray-700 text-sm">Telefonic, WhatsApp sau online. Trimite poze și detalii despre accident.</p>
+            <p class="text-gray-700 text-sm">Telefonic sau WhatsApp. Trimite poze și detalii despre accident.</p>
         </div>
         <div class="bg-white p-6 rounded-xl shadow-lg transform transition duration-500 hover:scale-105 hover:shadow-2xl text-center">
             <span class="text-blue-700 text-3xl font-bold mb-2 inline-block">2</span>
@@ -199,7 +230,7 @@ import '../styles/global.css';
             </ul>
             <p class="mt-4 text-gray-700">Nu ești sigur ce documente sunt necesare? Te ajutăm gratuit să verifici dosarul înainte de constatare.</p>
         </div>
-        <img src="/images/acte-daune.jpg" alt="Acte constatare daune" class="rounded-xl shadow-lg transform transition duration-500 hover:scale-105" />
+        <img src={documents.src} alt="Acte constatare daune" class="rounded-xl shadow-lg transform transition duration-500 hover:scale-105" loading="lazy" decoding="async"/>
     </div>
 
     <!-- Drepturile tale -->
@@ -212,7 +243,10 @@ import '../styles/global.css';
             <ul class="space-y-4">
                 <li>✔ Dreptul de a alege service-ul unde îți repari mașina</li>
                 <li>✔ Dreptul la despăgubire completă pentru toate daunele constatate</li>
-                <li>✔ Dreptul la mașină la schimb în anumite condiții</li>
+                <li>✔ Dreptul la
+                    <a href="/masina-la-schimb-cluj" class="text-blue-600 underline">
+                    mașină la schimb
+                </a> în anumite condiții</li>
             </ul>
 
             <ul class="space-y-4">
@@ -246,7 +280,7 @@ import '../styles/global.css';
 
     <!-- Testimonial -->
     <div class="bg-white rounded-xl shadow-xl p-10 flex flex-col md:flex-row items-center gap-8">
-        <img src="/images/client.jpg" alt="Client mulțumit" class="w-32 h-32 rounded-full shadow-lg transform transition duration-500 hover:scale-110" />
+        <img src="/images/client.jpg" alt="Client mulțumit" class="w-32 h-32 rounded-full shadow-lg transform transition duration-500 hover:scale-110" loading="lazy" decoding="async"/>
         <blockquote class="text-gray-700 text-lg">
             "Am avut un accident minor, dar Centrul de Daune Auto Cluj a gestionat totul rapid și fără stres. Recomand cu căldură!"
             <span class="block mt-2 font-semibold">– Andrei M., Cluj-Napoca</span>

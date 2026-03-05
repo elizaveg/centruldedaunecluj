@@ -1,17 +1,17 @@
 ---
 import '../styles/global.css';
 import herocar from '../assets/hero-car.jpeg';
-import logo from '../assets/logo.jpeg';
----
+import logo from '../../public/assets/logo.jpeg';
+import handshake from '../assets/gallery/handshake.webp';---
 
 <html lang="ro">
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Constatare Daune Auto Cluj | Dosar Daună RCA & CASCO</title>	<meta name="description" content="Consultanță gratuită dosare daune auto în Cluj-Napoca. Inspector daune și avocat colaborator. Fără stres pentru client." />
+	<title>Constatare Daune Auto Cluj | Dosar Daună RCA & CASCO</title>
+	<meta name="description" content="Ai accident auto în Cluj-Napoca? Te ajutăm cu constatare daune, dosar RCA sau CASCO, mașină la schimb și despăgubiri corecte." />
 	<link rel="canonical" href="https://centruldedaunecluj.ro/" />
 	<meta property="og:title" content="Centrul de Daune Auto Cluj" />
-	<meta name="description" content="Ai accident auto? Te ajutăm cu constatare daune, dosar RCA/CASCO, mașină la schimb și despăgubiri în Cluj-Napoca. Consultanță gratuită." />
 	<meta property="og:description" content="Ai accident auto în Cluj-Napoca? Te ajutăm cu constatare daune, dosar RCA/CASCO și mașină la schimb. Consultanță gratuită." />
 	<meta property="og:image" content="https://centruldedaunecluj.ro/social-preview.jpg" />
 	<meta property="og:type" content="website" />
@@ -36,6 +36,38 @@ import logo from '../assets/logo.jpeg';
 			"sameAs": ["https://www.facebook.com/centruldedaunecluj"]
 		}
 	</script>
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "FAQPage",
+			"mainEntity": [
+				{
+					"@type": "Question",
+					"name": "Ce trebuie să fac după un accident auto?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "După accident trebuie completat formularul de constatare amiabilă sau anunțată poliția, apoi se deschide dosarul de daună la asigurator. Echipa noastră te ajută cu întocmirea documentelor și gestionarea procesului."
+					}
+				},
+				{
+					"@type": "Question",
+					"name": "Cât durează constatarea daunelor auto?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "Constatarea daunelor poate dura între 24 și 72 de ore, în funcție de asigurator și complexitatea cazului."
+					}
+				},
+				{
+					"@type": "Question",
+					"name": "Pot primi mașină la schimb?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "Da, dacă nu ești vinovat de accident, ai dreptul legal la mașină la schimb pe perioada reparației."
+					}
+				}
+			]
+		}
+	</script>
 </head>
 <body class="font-sans bg-gray-50 text-gray-900 pt-20">
 
@@ -44,7 +76,7 @@ import logo from '../assets/logo.jpeg';
 	<div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
 		<!-- LOGO -->
 		<a href="/" class="flex items-center space-x-2">
-			<img src={logo.src} alt="Centrul De Daune Cluj Logo" class="h-10 w-auto" />
+			<img src={logo.src} alt="Constatare daune auto Cluj – Centrul de Daune" class="h-10 w-auto" loading="lazy" decoding="async"/>
 			<span class="font-bold text-lg text-blue-900">Centrul De Daune Cluj</span>
 		</a>
 
@@ -101,30 +133,96 @@ import logo from '../assets/logo.jpeg';
 
 <!-- HERO -->
 <section id="home" class="relative bg-blue-900 text-white h-[60vh] flex items-center justify-center">
-	<img src={herocar.src} alt="Centrul de daune auto din Cluj-Napoca – constatare RCA" class="absolute inset-0 w-full h-full object-cover opacity-30" loading="lazy"/>
+	<img src={herocar.src} alt="Centrul de daune auto din Cluj-Napoca – constatare RCA" class="absolute inset-0 w-full h-full object-cover opacity-30" loading="lazy" decoding="async"/>
 	<div class="relative z-10 text-center px-4">
 		<h1 class="text-4xl sm:text-5xl font-extrabold mb-4 leading-tight">Centrul de Daune Auto din Cluj-Napoca – Fără Stres și Fără Costuri</h1>
-		<p class="text-lg sm:text-xl mb-8">Consultanță completă pentru dosare de daună în Cluj-Napoca</p>
+		<p class="text-lg sm:text-xl mb-8">Consultanță completă pentru dosare de daună RCA și CASCO în Cluj-Napoca</p>
 	</div>
 </section>
 
 <!-- CUM FUNCȚIONEAZĂ -->
-<section class="py-20 px-4 max-w-6xl mx-auto text-center">
-	<h2 class="text-3xl font-bold mb-12">Proces simplu în 3 pași</h2>
+<!-- PROCES ACCIDENT AUTO -->
+<section class="py-20 px-4 max-w-6xl mx-auto">
+
+	<h2 class="text-3xl font-bold text-center mb-6">
+		Ce trebuie să faci după un accident auto în Cluj-Napoca
+	</h2>
+
+	<p class="text-center text-gray-600 max-w-3xl mx-auto mb-12">
+		Dacă ai fost implicat într-un accident rutier, este important să urmezi pașii corecți
+		pentru deschiderea dosarului de daună și obținerea despăgubirii. Echipa noastră
+		de la <strong>Centrul de Daune Cluj</strong> te ajută să gestionezi rapid procesul
+		de <a href="/constatare-daune-auto-cluj" class="text-blue-600 underline">constatare a daunelor auto în Cluj</a>,
+		fără drumuri inutile și fără birocrație.
+	</p>
+
 	<div class="grid gap-10 sm:grid-cols-3">
-		<div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
-			<h3 class="text-xl font-semibold mb-3">1. Ne contactezi</h3>
-			<p>Ne trimiți poze și informații despre accident.</p>
+
+		<!-- PAS 1 -->
+		<div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition">
+			<h3 class="text-xl font-semibold mb-3">
+				1. Contactează-ne imediat după accident
+			</h3>
+
+			<p class="text-gray-600">
+				După producerea accidentului, ne poți trimite fotografii cu
+				avariile mașinii și documentele disponibile. Îți explicăm
+				ce acte sunt necesare și te ghidăm pentru
+				deschiderea corectă a dosarului de daună RCA sau CASCO.
+			</p>
+
+			<p class="text-gray-600 mt-3">
+				Află mai multe despre
+				<a href="/intocmire-dosar-dauna-cluj" class="text-blue-600 underline">
+					întocmirea dosarului de daună
+				</a>.
+			</p>
 		</div>
-		<div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
-			<h3 class="text-xl font-semibold mb-3">2. Analizăm dosarul</h3>
-			<p>Inspectorul nostru verifică documentele și discută cu asiguratorul.</p>
+
+		<!-- PAS 2 -->
+		<div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition">
+			<h3 class="text-xl font-semibold mb-3">
+				2. Analizăm și pregătim documentația
+			</h3>
+
+			<p class="text-gray-600">
+				Inspectorul nostru verifică documentele și constatarea
+				daunelor pentru a evita problemele cu asiguratorul.
+				Ne ocupăm de completarea formularelor și de
+				comunicarea cu compania de asigurări.
+			</p>
+
+			<p class="text-gray-600 mt-3">
+				Serviciul nostru de
+				<a href="/constatare-daune-auto-cluj" class="text-blue-600 underline">
+					constatare daune auto în Cluj-Napoca
+				</a>
+				te ajută să obții evaluarea corectă a pagubelor.
+			</p>
 		</div>
-		<div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
-			<h3 class="text-xl font-semibold mb-3">3. Rezolvăm cazul</h3>
-			<p>Te direcționăm către un service partener și urmărim reparația.</p>
+
+		<!-- PAS 3 -->
+		<div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition">
+			<h3 class="text-xl font-semibold mb-3">
+				3. Reparăm mașina și urmărim despăgubirea
+			</h3>
+
+			<p class="text-gray-600">
+				Te direcționăm către un service partener autorizat,
+				iar dacă este necesar te ajutăm să obții
+				<a href="/masina-la-schimb-cluj" class="text-blue-600 underline">
+					mașină la schimb pe perioada reparației
+				</a>.
+			</p>
+
+			<p class="text-gray-600 mt-3">
+				Monitorizăm întreg procesul până la finalizarea
+				reparației și plata despăgubirii.
+			</p>
 		</div>
+
 	</div>
+
 </section>
 
 <!-- De ce să ne alegi -->
@@ -172,9 +270,7 @@ import logo from '../assets/logo.jpeg';
 					cu vătămări corporale și despăgubiri.
 				</p>
 			</div>
-
 		</div>
-
 	</div>
 </section>
 
@@ -191,7 +287,7 @@ import logo from '../assets/logo.jpeg';
 			<!-- IMAGINE -->
 			<div>
 				<img
-					src={herocar.src}
+					src={handshake.src}
 					alt="Gestionare dosar daună auto Cluj"
 					class="rounded-2xl shadow-xl w-full object-cover"
 					loading="lazy"
@@ -223,11 +319,8 @@ import logo from '../assets/logo.jpeg';
 					Scopul nostru este să reducem stresul și birocrația —
 					noi gestionăm tot procesul pentru tine.
 				</p>
-
 			</div>
-
 		</div>
-
 	</div>
 </section>
 
@@ -334,28 +427,27 @@ import logo from '../assets/logo.jpeg';
 				</p>
 			</div>
 		</div>
-
 	</div>
 </section>
 
 <!-- ECHIPA -->
 <section id="despre"  class="py-20 px-4 max-w-6xl mx-auto text-center">
-	<h2 class="text-3xl font-bold mb-12">Echipa noastră</h2>
+	<h2 class="text-3xl font-bold mb-12">Echipa noastră de specialiști în daune auto din Cluj</h2>
 	<div class="grid gap-8 sm:grid-cols-3">
 		<div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
-			<img src="/assets/team/drago.jpeg" alt="Dragos Goron" class="w-32 h-32 mx-auto rounded-full mb-4 object-cover" loading="lazy"/>
+			<img src="/assets/team/dragos.jpeg" alt="Dragos Goron" class="w-32 h-32 mx-auto rounded-full mb-4 object-cover" loading="lazy" decoding="async"/>
 			<h3 class="text-xl font-semibold mb-2">Dragoș Goron</h3>
 			<p>Inspector daune auto | Co-fondator</p>
 			<p class="mt-2 text-gray-600">Peste 10 ani de experiență în gestionarea dosarelor de daună.</p>
 		</div>
 		<div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
-			<img src="/assets/team/mari.jpeg" alt="Maria Posteuca" class="w-32 h-32 mx-auto rounded-full mb-4 object-cover" loading="lazy"/>
+			<img src="/assets/team/maria.jpeg" alt="Maria Posteuca" class="w-32 h-32 mx-auto rounded-full mb-4 object-cover" loading="lazy" decoding="async"/>
 			<h3 class="text-xl font-semibold mb-2">Maria Marioara</h3>
 			<p>Avocat colaborator | Drept civil & vătămări corporale</p>
 			<p class="mt-2 text-gray-600">Specializată în obținerea despăgubirilor pentru victimele accidentelor rutiere.</p>
 		</div>
 		<div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
-			<img src="/assets/team/mari.jpeg" alt="Maria Posteuca" class="w-32 h-32 mx-auto rounded-full mb-4 object-cover" loading="lazy"/>
+			<img src="/assets/team/maria.jpeg" alt="Maria Posteuca" class="w-32 h-32 mx-auto rounded-full mb-4 object-cover" loading="lazy" decoding="async"/>
 			<h3 class="text-xl font-semibold mb-2">Mihai Ionescu</h3>
 			<p>Consultant digital | Co-fondator</p>
 			<p class="mt-2 text-gray-600">Responsabil de comunicare și relația cu clienții.</p>
@@ -376,7 +468,7 @@ import logo from '../assets/logo.jpeg';
 <section class="py-20 bg-white">
 	<div class="max-w-5xl mx-auto px-4">
 		<h2 class="text-3xl font-bold text-center mb-12">
-			Întrebări Frecvente (FAQ)
+			Întrebări frecvente despre dosarele de daună auto
 		</h2>
 
 		<div class="space-y-4">
@@ -430,6 +522,5 @@ import logo from '../assets/logo.jpeg';
 <footer class="bg-gray-900 text-white py-6 text-center text-sm px-4">
 	Centrul De Daune Cluj oferă servicii de consultanță și asistență administrativă. Nu reprezentăm societăți de asigurare. Deciziile finale aparțin asiguratorilor și unităților de service.
 </footer>
-
 </body>
 </html>

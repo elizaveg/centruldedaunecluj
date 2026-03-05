@@ -3,6 +3,7 @@ const title = "Mașină la Schimb Cluj-Napoca după Accident | Gratuit prin RCA"
 const description = "Primește mașină la schimb în Cluj-Napoca pe perioada reparației auto. Gratuit prin RCA-ul șoferului vinovat.";
 const canonical = "https://centruldedaunecluj.ro/masina-la-schimb-cluj";
 import '../styles/global.css';
+import carkeys from '../assets/gallery/car-keys.webp';
 ---
 
 <html lang="ro">
@@ -43,7 +44,7 @@ import '../styles/global.css';
 <header class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md shadow-md z-50">
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         <a href="/" class="flex items-center space-x-2">
-            <img src="/src/assets/logo.jpeg" alt="Centrul De Daune Cluj Logo" class="h-10 w-auto" />
+            <img src="/assets/logo.jpeg" alt="Centrul De Daune Cluj Logo" class="h-10 w-auto" loading="lazy" decoding="async" />
             <span class="font-bold text-lg text-blue-900">Centrul De Daune Cluj</span>
         </a>
 
@@ -92,14 +93,15 @@ import '../styles/global.css';
     <div class="max-w-6xl mx-auto px-6 text-center relative z-10">
         <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">Mașină la Schimb în Cluj-Napoca după Accident</h1>
         <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto">
-            Primești autoturism de înlocuire pe perioada reparației, gratuit prin RCA-ul șoferului vinovat.
+            Primești autoturism de înlocuire pe perioada reparației, gratuit prin RCA-ul șoferului vinovat.  📞 Sună acum: 0743 058 942
         </p>
-        <a href="#eligibilitate" class="bg-white text-gray-900 font-semibold px-8 py-4 rounded-lg shadow-lg hover:bg-gray-200 transition">
-            Verifică eligibilitatea
+
+        <a href="https://wa.me/40740123456" class="bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold shadow-lg hover:bg-gray-200 transition">
+            Sună acum
         </a>
     </div>
     <div class="absolute inset-0 opacity-20">
-        <img src="/public/assets/car-repair.jpg" alt="Mașină la schimb Cluj" class="w-full h-full object-cover" />
+        <img src={carkeys.src} alt="Mașină la schimb Cluj" class="w-full h-full object-cover" loading="lazy" decoding="async"/>
     </div>
 </section>
 
@@ -150,6 +152,12 @@ import '../styles/global.css';
                 <strong>Primești mașină la schimb:</strong> În tot acest timp, beneficiezi de un autoturism de înlocuire complet funcțional, gratuit.
             </li>
         </ol>
+        <br >
+
+        <p class="text-gray-700 mb-6 text-lg">
+            Dacă nu ai făcut încă constatarea daunelor vezi
+            <a href="/constatare-daune-auto-cluj" class="text-blue-600 underline">constatare daune auto în Cluj.</a>
+        </p>
     </div>
 </section>
 
