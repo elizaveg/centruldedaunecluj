@@ -2,8 +2,6 @@
 
 ```sh
 npm create astro@latest -- --template basics
-nvm use node 23
-npm run build
 ```
 
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
@@ -25,9 +23,6 @@ Inside of your Astro project, you'll see the following folders and files:
 │   │   └── Layout.astro
 │   └── pages
 │       └── index.astro
-│       └── constatare-daune-auto-cluj.astro
-│       └── intocmire-dosar-dauna-cluj.astro
-│       └── masina-la-schimb-cluj.astro
 └── package.json
 ```
 

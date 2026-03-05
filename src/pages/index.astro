@@ -1,17 +1,21 @@
 ---
 import '../styles/global.css';
 import herocar from '../assets/hero-car.jpeg';
+import logo from '../assets/logo.jpeg';
 ---
 
 <html lang="ro">
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Centrul de Daune Auto Cluj – Constatare RCA & CASCO</title>
-	<meta name="description" content="Consultanță gratuită dosare daune auto în Cluj-Napoca. Inspector daune și avocat colaborator. Fără stres pentru client." />
+	<title>Constatare Daune Auto Cluj | Dosar Daună RCA & CASCO</title>	<meta name="description" content="Consultanță gratuită dosare daune auto în Cluj-Napoca. Inspector daune și avocat colaborator. Fără stres pentru client." />
 	<link rel="canonical" href="https://centruldedaunecluj.ro/" />
 	<meta property="og:title" content="Centrul de Daune Auto Cluj" />
-	<meta property="og:description" content="Constatare daune RCA și CASCO în Cluj-Napoca." />
+	<meta name="description" content="Ai accident auto? Te ajutăm cu constatare daune, dosar RCA/CASCO, mașină la schimb și despăgubiri în Cluj-Napoca. Consultanță gratuită." />
+	<meta property="og:description" content="Ai accident auto în Cluj-Napoca? Te ajutăm cu constatare daune, dosar RCA/CASCO și mașină la schimb. Consultanță gratuită." />
+	<meta property="og:image" content="https://centruldedaunecluj.ro/social-preview.jpg" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://centruldedaunecluj.ro/" />
 
 	<!-- SEO Local JSON-LD -->
 	<script type="application/ld+json">
@@ -40,7 +44,7 @@ import herocar from '../assets/hero-car.jpeg';
 	<div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
 		<!-- LOGO -->
 		<a href="/" class="flex items-center space-x-2">
-			<img src="/src/assets/logo.jpeg" alt="Centrul De Daune Cluj Logo" class="h-10 w-auto" />
+			<img src={logo.src} alt="Centrul De Daune Cluj Logo" class="h-10 w-auto" />
 			<span class="font-bold text-lg text-blue-900">Centrul De Daune Cluj</span>
 		</a>
 
@@ -400,6 +404,60 @@ import herocar from '../assets/hero-car.jpeg';
 	<a href="https://wa.me/40740123456" class="bg-green-500 hover:bg-green-600 transition duration-300 px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl inline-block animate-pulse sm:animate-none">
 		📩 Trimite solicitare
 	</a></section>
+
+<!-- FAQ -->
+<section class="py-20 bg-white">
+	<div class="max-w-5xl mx-auto px-4">
+		<h2 class="text-3xl font-bold text-center mb-12">
+			Întrebări Frecvente (FAQ)
+		</h2>
+
+		<div class="space-y-4">
+
+			<!-- Accordion Item -->
+			<details class="bg-gray-50 rounded-xl shadow-sm p-6 cursor-pointer group">
+				<summary class="font-semibold text-lg flex justify-between items-center">
+					Cât costă serviciile de constatare și dosar daună?
+					<span class="text-2xl group-open:rotate-45 transition-transform">+</span>
+				</summary>
+				<p class="text-gray-600 mt-4">
+					Serviciile noastre sunt gratuite pentru client. Suntem remunerați prin partenerii noștri (service-uri auto), astfel încât nu plătești nimic pentru consultanță.
+				</p>
+			</details>
+
+			<details class="bg-gray-50 rounded-xl shadow-sm p-6 cursor-pointer group">
+				<summary class="font-semibold text-lg flex justify-between items-center">
+					Pot obține mașină la schimb?
+					<span class="text-2xl group-open:rotate-45 transition-transform">+</span>
+				</summary>
+				<p class="text-gray-600 mt-4">
+					Da. Te ajutăm să obții mașină la schimb pe perioada reparației, conform drepturilor prevăzute de polița RCA sau CASCO.
+				</p>
+			</details>
+
+			<details class="bg-gray-50 rounded-xl shadow-sm p-6 cursor-pointer group">
+				<summary class="font-semibold text-lg flex justify-between items-center">
+					Cât durează un dosar de daună?
+					<span class="text-2xl group-open:rotate-45 transition-transform">+</span>
+				</summary>
+				<p class="text-gray-600 mt-4">
+					Durata depinde de complexitate și de asigurator. Noi urmărim activ dosarul pentru a accelera aprobarea și plata despăgubirii.
+				</p>
+			</details>
+
+			<details class="bg-gray-50 rounded-xl shadow-sm p-6 cursor-pointer group">
+				<summary class="font-semibold text-lg flex justify-between items-center">
+					Ajutați și în caz de vătămare corporală?
+					<span class="text-2xl group-open:rotate-45 transition-transform">+</span>
+				</summary>
+				<p class="text-gray-600 mt-4">
+					Da. Colaborăm cu avocat specializat pentru obținerea despăgubirilor în caz de vătămări corporale sau accidente grave.
+				</p>
+			</details>
+
+		</div>
+	</div>
+</section>
 
 <!-- DISCLAIMER -->
 <footer class="bg-gray-900 text-white py-6 text-center text-sm px-4">
