@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import herocar from '../assets/hero-car.jpeg';
 ---
 
 <html lang="ro">
@@ -38,14 +39,14 @@ import '../styles/global.css';
 <header class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md shadow-md z-50">
 	<div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
 		<!-- LOGO -->
-		<a href="#home" class="flex items-center space-x-2">
+		<a href="/" class="flex items-center space-x-2">
 			<img src="/src/assets/logo.jpeg" alt="Centrul De Daune Cluj Logo" class="h-10 w-auto" />
 			<span class="font-bold text-lg text-blue-900">Centrul De Daune Cluj</span>
 		</a>
 
 		<!-- MENIU DESKTOP -->
 		<nav class="hidden md:flex space-x-8 font-medium">
-			<a href="#home" class="hover:text-blue-600 transition">Home</a>
+			<a href="/" class="hover:text-blue-600 transition">Home</a>
 			<a href="#servicii" class="hover:text-blue-600 transition">Servicii</a>
 			<a href="/intocmire-dosar-dauna-cluj" class="text-blue-600 hover:underline">Întocmire dosar daună</a>
 			<a href="/masina-la-schimb-cluj" class="text-blue-600 hover:underline">Mașină la schimb</a>
@@ -95,7 +96,8 @@ import '../styles/global.css';
 </a>
 
 <!-- HERO -->
-<section id="home" class="relative bg-blue-900 text-white h-[60vh] flex items-center justify-center">	<img src="/public/assets/hero-car.jpeg" alt="Centrul de daune auto din Cluj-Napoca – constatare RCA" class="absolute inset-0 w-full h-full object-cover opacity-30" loading="lazy"/>
+<section id="home" class="relative bg-blue-900 text-white h-[60vh] flex items-center justify-center">
+	<img src={herocar.src} alt="Centrul de daune auto din Cluj-Napoca – constatare RCA" class="absolute inset-0 w-full h-full object-cover opacity-30" loading="lazy"/>
 	<div class="relative z-10 text-center px-4">
 		<h1 class="text-4xl sm:text-5xl font-extrabold mb-4 leading-tight">Centrul de Daune Auto din Cluj-Napoca – Fără Stres și Fără Costuri</h1>
 		<p class="text-lg sm:text-xl mb-8">Consultanță completă pentru dosare de daună în Cluj-Napoca</p>
@@ -257,7 +259,7 @@ import '../styles/global.css';
 
 		<!-- CTA -->
 		<div class="text-center mt-14">
-			<a href="/constatare-daune-auto-cluj" class="text-blue-600 hover:underline">
+			<a href="/constatare-daune-auto-cluj" class="bg-white text-blue-900 font-semibold px-8 py-4 rounded-lg shadow-lg hover:bg-gray-100 transition">
 				Constatare Daună Auto în Cluj-Napoca
 			</a>
 		</div>
