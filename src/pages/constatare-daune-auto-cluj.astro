@@ -15,9 +15,86 @@ import '../styles/global.css';
     />
 
     <link rel="canonical" href="https://centruldedaunecluj.ro/constatare-daune-auto-cluj" />
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "AutoRepair",
+            "name": "Centrul De Daune Cluj",
+            "image": "https://centruldedaunecluj.ro/assets/logo.png",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Str. Soporului 8",
+                "addressLocality": "Cluj-Napoca",
+                "addressCountry": "RO"
+            },
+            "telephone": "+40740123456",
+            "areaServed": "Cluj-Napoca",
+            "priceRange": "0",
+            "serviceOffered": {
+                "@type": "Service",
+                "name": "Constatare daună auto RCA și CASCO"
+            }
+        }
+    </script>
 </head>
 
 <body class="font-sans bg-gray-50 text-gray-900 relative">
+
+<!-- HEADER -->
+<header class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md shadow-md z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <!-- LOGO -->
+        <a href="/" class="flex items-center space-x-2">
+            <img src="/src/assets/logo.jpeg" alt="Centrul De Daune Cluj Logo" class="h-10 w-auto" />
+            <span class="font-bold text-lg text-blue-900">Centrul De Daune Cluj</span>
+        </a>
+
+        <!-- MENIU DESKTOP -->
+        <nav class="hidden md:flex space-x-8 font-medium">
+            <a href="/" class="hover:text-blue-600 transition">Home</a>
+            <a href="/#servicii" class="hover:text-blue-600 transition">Servicii</a>
+            <a href="/intocmire-dosar-dauna-cluj" class="text-blue-600 hover:underline">Întocmire dosar daună</a>
+            <a href="/masina-la-schimb-cluj" class="text-blue-600 hover:underline">Mașină la schimb</a>
+            <a href="/#despre" class="hover:text-blue-600 transition">Despre noi</a>
+            <a href="/#contact" class="hover:text-blue-600 transition">Contact</a>
+        </nav>
+
+        <!-- BURGER MENU MOBILE -->
+        <div class="md:hidden">
+            <button id="mobile-menu-button" class="text-gray-700 focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- MOBILE MENU (hidden by default) -->
+    <nav id="mobile-menu" class="hidden md:hidden bg-white shadow-md absolute top-full left-0 w-full">
+        <div class="flex flex-col p-4 space-y-4">
+            <a href="/" class="hover:text-blue-600 transition">Home</a>
+            <a href="#despre" class="hover:text-blue-600 transition">Despre noi</a>
+            <a href="#servicii" class="hover:text-blue-600 transition">Servicii</a>
+            <a href="/intocmire-dosar-dauna-cluj" class="hover:text-blue-600 transition">Întocmire dosar daună</a>
+            <a href="/masina-la-schimb-cluj" class="hover:text-blue-600 transition">Mașină la schimb</a>
+            <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
+            <a href="https://wa.me/40740123456" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full shadow-md transition text-center">
+                📩 Contact rapid
+            </a>
+        </div>
+    </nav>
+</header>
+
+<script>
+    // Toggle Mobile Menu
+    const btn = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+</script>
 
 <!-- Sticky WhatsApp Button -->
 <a href="https://wa.me/40740123456" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-5 rounded-full shadow-xl transition transform hover:scale-110 z-50">
@@ -28,8 +105,9 @@ import '../styles/global.css';
 <section class="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-28 px-4 text-center">
     <h1 class="text-4xl sm:text-5xl font-extrabold mb-6 animate-fadeInDown">Constatare Daune Auto în Cluj-Napoca – RCA & CASCO</h1>
     <p class="text-lg sm:text-xl mb-8 max-w-3xl mx-auto animate-fadeInUp">
-        Gestionăm rapid dosarul de daună, fără drumuri inutile și fără costuri pentru tine. Consultanță gratuită și reparații prin service-uri autorizate.
-    </p>
+        Gestionăm constatarea fizică a daunelor auto în Cluj-Napoca,
+        întocmirea dosarului RCA sau CASCO și colaborarea cu asiguratorii.
+        Fără drumuri inutile și fără costuri pentru tine.    </p>
     <a href="https://wa.me/40740123456" class="bg-green-500 hover:bg-green-600 transition duration-300 px-10 py-5 rounded-full font-semibold shadow-lg hover:shadow-xl inline-block animate-bounce sm:animate-none">
         📩 Trimite solicitare
     </a>
@@ -44,6 +122,37 @@ import '../styles/global.css';
             <h2 class="text-3xl font-bold mb-4">Ce înseamnă constatarea daunelor auto?</h2>
             <p class="text-gray-700 mb-4">Constatarea daunelor auto este evaluarea pagubelor rezultate după un accident rutier. Este obligatorie pentru deschiderea dosarului RCA sau CASCO și trebuie realizată corect pentru a obține despăgubirea completă.</p>
             <p class="text-gray-700">Inspectorul de daune întocmește raportul oficial și te ghidează pas cu pas, astfel încât procesul să fie simplu și fără stres.</p>
+        </div>
+    </div>
+    <!-- RCA vs CASCO -->
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+            <h2 class="text-3xl font-bold mb-4">Constatare Daună RCA vs CASCO în Cluj</h2>
+
+            <p class="text-gray-700 mb-4">
+                În cazul unei daune RCA, despăgubirea este plătită de asiguratorul
+                șoferului vinovat. Pentru CASCO, compania ta de asigurări suportă
+                costurile, conform condițiilor poliței.
+            </p>
+
+            <p class="text-gray-700 mb-4">
+                Procedura de constatare este similară, însă documentele și termenele
+                diferă. De aceea este important ca evaluarea să fie făcută corect,
+                pentru a evita întârzieri sau despăgubiri parțiale.
+            </p>
+
+            <p class="text-gray-700">
+                La Centrul de Daune Auto Cluj te ghidăm complet, indiferent de
+                asigurator sau tipul poliței.
+            </p>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-lg">
+            <h3 class="text-xl font-semibold mb-4">Lucrăm cu toate societățile de asigurare</h3>
+            <p class="text-gray-700">
+                Gestionăm dosare RCA și CASCO pentru toate companiile din România,
+                fără costuri pentru tine.
+            </p>
         </div>
     </div>
 
@@ -91,6 +200,32 @@ import '../styles/global.css';
             <p class="mt-4 text-gray-700">Nu ești sigur ce documente sunt necesare? Te ajutăm gratuit să verifici dosarul înainte de constatare.</p>
         </div>
         <img src="/images/acte-daune.jpg" alt="Acte constatare daune" class="rounded-xl shadow-lg transform transition duration-500 hover:scale-105" />
+    </div>
+
+    <!-- Drepturile tale -->
+    <div class="bg-white rounded-xl shadow-xl p-10">
+        <h2 class="text-3xl font-bold mb-6 text-center">
+            Care sunt drepturile tale după un accident rutier?
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-8 text-gray-700">
+            <ul class="space-y-4">
+                <li>✔ Dreptul de a alege service-ul unde îți repari mașina</li>
+                <li>✔ Dreptul la despăgubire completă pentru toate daunele constatate</li>
+                <li>✔ Dreptul la mașină la schimb în anumite condiții</li>
+            </ul>
+
+            <ul class="space-y-4">
+                <li>✔ Dreptul la informare transparentă din partea asiguratorului</li>
+                <li>✔ Dreptul de a contesta o despăgubire insuficientă</li>
+                <li>✔ Dreptul la suport juridic în cazuri complexe</li>
+            </ul>
+        </div>
+
+        <p class="mt-6 text-gray-700 text-center">
+            Noi îți explicăm exact ce ți se cuvine legal și intervenim dacă oferta
+            de despăgubire nu reflectă valoarea reală a reparației.
+        </p>
     </div>
 
     <!-- De ce noi -->
