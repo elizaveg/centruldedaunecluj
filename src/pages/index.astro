@@ -2,7 +2,8 @@
 import '../styles/global.css';
 import herocar from '../assets/hero-car.jpeg';
 import logo from '../../public/assets/logo.jpeg';
-import handshake from '../assets/gallery/handshake.webp';---
+import handshake from '../assets/gallery/handshake.webp';
+---
 
 <html lang="ro">
 <head>
@@ -30,7 +31,7 @@ import handshake from '../assets/gallery/handshake.webp';---
 				"postalCode": "400000",
 				"addressCountry": "RO"
 			},
-			"telephone": "+40740123456",
+			"telephone": "+40743058942",
 			"url": "https://centruldedaunecluj.ro",
 			"priceRange": "0",
 			"sameAs": ["https://www.facebook.com/centruldedaunecluj"]
@@ -73,19 +74,19 @@ import handshake from '../assets/gallery/handshake.webp';---
 
 <!-- HEADER -->
 <header class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md shadow-md z-50">
-	<div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+	<div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
 		<!-- LOGO -->
-		<a href="/" class="flex items-center space-x-2">
-			<img src={logo.src} alt="Constatare daune auto Cluj – Centrul de Daune" class="h-10 w-auto" loading="lazy" decoding="async"/>
-			<span class="font-bold text-lg text-blue-900">Centrul De Daune Cluj</span>
+		<a href="/" class="flex items-center space-x-3">
+			<img src={logo.src} alt="Constatare daune auto Cluj – Centrul de Daune" class="h-10 md:h-16 w-auto" />
+			<span class="font-bold text-xl text-blue-900">Centrul De Daune Cluj</span>
 		</a>
 
 		<!-- MENIU DESKTOP -->
 		<nav class="hidden md:flex space-x-8 font-medium">
 			<a href="/" class="hover:text-blue-600 transition">Home</a>
 			<a href="#servicii" class="hover:text-blue-600 transition">Servicii</a>
-			<a href="/intocmire-dosar-dauna-cluj" class="text-blue-600 hover:underline">Întocmire dosar daună</a>
-			<a href="/masina-la-schimb-cluj" class="text-blue-600 hover:underline">Mașină la schimb</a>
+			<a href="/intocmire-dosar-dauna-cluj" class="hover:text-blue-600 transition">Întocmire dosar daună</a>
+			<a href="/masina-la-schimb-cluj" class="hover:text-blue-600 transition">Mașină la schimb</a>
 			<a href="#despre" class="hover:text-blue-600 transition">Despre noi</a>
 			<a href="#contact" class="hover:text-blue-600 transition">Contact</a>
 		</nav>
@@ -109,9 +110,6 @@ import handshake from '../assets/gallery/handshake.webp';---
 			<a href="/masina-la-schimb-cluj" class="hover:text-blue-600 transition">Mașină la schimb</a>
 			<a href="#despre" class="hover:text-blue-600 transition">Despre noi</a>
 			<a href="#contact" class="hover:text-blue-600 transition">Contact</a>
-			<a href="https://wa.me/40740123456" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full shadow-md transition text-center">
-				📩 Contact rapid
-			</a>
 		</div>
 	</nav>
 </header>
@@ -124,23 +122,54 @@ import handshake from '../assets/gallery/handshake.webp';---
 	btn.addEventListener('click', () => {
 		menu.classList.toggle('hidden');
 	});
+
+	// Close Menu
+	document.addEventListener('click', (event) => {
+		const isClickInsideMenu = menu.contains(event.target);
+		const isClickOnButton = btn.contains(event.target);
+
+		if (!isClickInsideMenu && !isClickOnButton) {
+			menu.classList.add('hidden');
+		}
+	});
 </script>
 
 <!-- Sticky WhatsApp Button -->
-<a href="https://wa.me/40740123456" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-5 rounded-full shadow-xl transition transform hover:scale-110 z-50">
+<a href="https://wa.me/40743058942 " class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-5 rounded-full shadow-xl transition transform hover:scale-110 z-50">
 	📩 Contact rapid
 </a>
 
 <!-- HERO -->
 <section id="home" class="relative bg-blue-900 text-white h-[60vh] flex items-center justify-center">
-	<img src={herocar.src} alt="Centrul de daune auto din Cluj-Napoca – constatare RCA" class="absolute inset-0 w-full h-full object-cover opacity-30" loading="lazy" decoding="async"/>
+	<img src={herocar.src} alt="Centrul de daune auto din Cluj-Napoca – constatare RCA" class="absolute inset-0 w-full h-full object-cover opacity-30" loading="eager" decoding="async"/>
+
 	<div class="relative z-10 text-center px-4">
-		<h1 class="text-4xl sm:text-5xl font-extrabold mb-4 leading-tight">Centrul de Daune Auto din Cluj-Napoca – Fără Stres și Fără Costuri</h1>
-		<p class="text-lg sm:text-xl mb-8">Consultanță completă pentru dosare de daună RCA și CASCO în Cluj-Napoca</p>
+		<h1 class="text-4xl sm:text-5xl font-extrabold mb-4 leading-tight">
+			Centrul de Daune Auto din Cluj-Napoca – Fără Stres și Fără Costuri
+		</h1>
+
+		<p class="text-lg sm:text-xl mb-8">
+			Consultanță completă pentru dosare de daună RCA și CASCO în Cluj-Napoca
+		</p>
+
+		<!-- CTA BUTTONS -->
+		<div class="flex flex-col sm:flex-row gap-4 justify-center">
+
+			<a href="tel:+40743058942"
+			   class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-lg shadow-lg transition">
+				📞 Sună acum
+			</a>
+
+			<a href="https://wa.me/40743058942"
+			   class="bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-4 rounded-lg shadow-lg transition">
+				💬 WhatsApp rapid
+			</a>
+
+		</div>
+
 	</div>
 </section>
 
-<!-- CUM FUNCȚIONEAZĂ -->
 <!-- PROCES ACCIDENT AUTO -->
 <section class="py-20 px-4 max-w-6xl mx-auto">
 
@@ -155,6 +184,22 @@ import handshake from '../assets/gallery/handshake.webp';---
 		de <a href="/constatare-daune-auto-cluj" class="text-blue-600 underline">constatare a daunelor auto în Cluj</a>,
 		fără drumuri inutile și fără birocrație.
 	</p>
+	<div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition">
+		<h3 class="text-xl font-semibold mb-3">
+			Constatare Daune Auto Cluj
+		</h3>
+
+		<p class="text-gray-600">
+			Constatarea daunelor și deschiderea dosarului RCA sau CASCO
+			cu suport complet din partea echipei noastre.
+		</p>
+
+		<a href="/constatare-daune-auto-cluj"
+		   class="text-blue-600 font-semibold mt-3 inline-block">
+			Află mai multe →
+		</a>
+	</div>
+	<br >
 
 	<div class="grid gap-10 sm:grid-cols-3">
 
@@ -324,13 +369,6 @@ import handshake from '../assets/gallery/handshake.webp';---
 	</div>
 </section>
 
-		<!-- CTA -->
-		<div class="text-center mt-14">
-			<a href="/constatare-daune-auto-cluj" class="bg-white text-blue-900 font-semibold px-8 py-4 rounded-lg shadow-lg hover:bg-gray-100 transition">
-				Constatare Daună Auto în Cluj-Napoca
-			</a>
-		</div>
-
 <!-- SERVICII -->
 <section id="servicii" class="py-20 bg-gray-50">
 	<div class="max-w-7xl mx-auto px-4">
@@ -460,7 +498,7 @@ import handshake from '../assets/gallery/handshake.webp';---
 	<h2 class="text-3xl sm:text-4xl font-bold mb-6">Contactează-ne acum</h2>
 	<p class="mb-6 text-lg sm:text-xl">Str. Soporului nr. 8, Cluj-Napoca<br />0743 058 942 | contact@centruldedaunecluj.ro</p>
 	<p class="mb-8 text-lg sm:text-xl">Program: Luni – Vineri: 09:00 – 18:00</p>
-	<a href="https://wa.me/40740123456" class="bg-green-500 hover:bg-green-600 transition duration-300 px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl inline-block animate-pulse sm:animate-none">
+	<a href="https://wa.me/40743058942" class="bg-green-500 hover:bg-green-600 transition duration-300 px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl inline-block animate-pulse sm:animate-none">
 		📩 Trimite solicitare
 	</a></section>
 
@@ -519,8 +557,23 @@ import handshake from '../assets/gallery/handshake.webp';---
 </section>
 
 <!-- DISCLAIMER -->
-<footer class="bg-gray-900 text-white py-6 text-center text-sm px-4">
-	Centrul De Daune Cluj oferă servicii de consultanță și asistență administrativă. Nu reprezentăm societăți de asigurare. Deciziile finale aparțin asiguratorilor și unităților de service.
+<footer class="bg-gray-900 text-gray-400 py-10">
+	<div class="max-w-6xl mx-auto px-4 text-center">
+
+		<p class="text-white font-semibold mb-2">
+			Centrul de Daune Cluj
+		</p>
+
+		<p>
+			Constatare daune auto, dosare RCA și CASCO,
+			mașină la schimb și suport juridic în Cluj-Napoca.
+		</p>
+
+		<p class="mt-4">
+			© 2026 Centrul de Daune Cluj
+		</p>
+
+	</div>
 </footer>
 </body>
 </html>

@@ -30,7 +30,7 @@ import documents from '../assets/gallery/documents.webp';
                 "addressLocality": "Cluj-Napoca",
                 "addressCountry": "RO"
             },
-            "telephone": "+40740123456",
+            "telephone": "+40743058942",
             "areaServed": "Cluj-Napoca",
             "priceRange": "0",
             "serviceOffered": {
@@ -45,19 +45,19 @@ import documents from '../assets/gallery/documents.webp';
 
 <!-- HEADER -->
 <header class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md shadow-md z-50">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        <!-- LOGO -->
-        <a href="/" class="flex items-center space-x-2">
-            <img src="/assets/logo.jpeg" alt="Centrul De Daune Cluj Logo" class="h-10 w-auto" loading="lazy" decoding="async"/>
-            <span class="font-bold text-lg text-blue-900">Centrul De Daune Cluj</span>
-        </a>
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- LOGO -->
+            <a href="/" class="flex items-center space-x-3">
+                <img src="/assets/logo.jpeg" alt="Constatare daune auto Cluj – Centrul de Daune" class="h-10 md:h-16 w-auto" />
+                <span class="font-bold text-xl text-blue-900">Centrul De Daune Cluj</span>
+            </a>
 
         <!-- MENIU DESKTOP -->
         <nav class="hidden md:flex space-x-8 font-medium">
             <a href="/" class="hover:text-blue-600 transition">Home</a>
             <a href="/#servicii" class="hover:text-blue-600 transition">Servicii</a>
-            <a href="/intocmire-dosar-dauna-cluj" class="text-blue-600 hover:underline">Întocmire dosar daună</a>
-            <a href="/masina-la-schimb-cluj" class="text-blue-600 hover:underline">Mașină la schimb</a>
+            <a href="/intocmire-dosar-dauna-cluj" class="hover:text-blue-600 transition">Întocmire dosar daună</a>
+            <a href="/masina-la-schimb-cluj" class="hover:text-blue-600 transition">Mașină la schimb</a>
             <a href="/#despre" class="hover:text-blue-600 transition">Despre noi</a>
             <a href="/#contact" class="hover:text-blue-600 transition">Contact</a>
         </nav>
@@ -81,9 +81,6 @@ import documents from '../assets/gallery/documents.webp';
             <a href="/intocmire-dosar-dauna-cluj" class="hover:text-blue-600 transition">Întocmire dosar daună</a>
             <a href="/masina-la-schimb-cluj" class="hover:text-blue-600 transition">Mașină la schimb</a>
             <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
-            <a href="https://wa.me/40740123456" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full shadow-md transition text-center">
-                📩 Contact rapid
-            </a>
         </div>
     </nav>
 </header>
@@ -96,10 +93,20 @@ import documents from '../assets/gallery/documents.webp';
     btn.addEventListener('click', () => {
         menu.classList.toggle('hidden');
     });
+
+    // Close Menu
+    document.addEventListener('click', (event) => {
+        const isClickInsideMenu = menu.contains(event.target);
+        const isClickOnButton = btn.contains(event.target);
+
+        if (!isClickInsideMenu && !isClickOnButton) {
+            menu.classList.add('hidden');
+        }
+    });
 </script>
 
 <!-- Sticky WhatsApp Button -->
-<a href="https://wa.me/40740123456" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-5 rounded-full shadow-xl transition transform hover:scale-110 z-50">
+<a href="https://wa.me/40743058942" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-5 rounded-full shadow-xl transition transform hover:scale-110 z-50">
     📩 Contact rapid
 </a>
 
@@ -117,7 +124,7 @@ import documents from '../assets/gallery/documents.webp';
         Gestionăm constatarea fizică a daunelor auto în Cluj-Napoca,
         întocmirea dosarului RCA sau CASCO și colaborarea cu asiguratorii.
         Fără drumuri inutile și fără costuri pentru tine.    </p>
-    <a href="https://wa.me/40740123456" class="bg-green-500 hover:bg-green-600 transition duration-300 px-10 py-5 rounded-full font-semibold shadow-lg hover:shadow-xl inline-block animate-bounce sm:animate-none">
+    <a href="https://wa.me/40743058942" class="bg-green-500 hover:bg-green-600 transition duration-300 px-10 py-5 rounded-full font-semibold shadow-lg hover:shadow-xl inline-block animate-bounce sm:animate-none">
         📩 Trimite solicitare
     </a>
 </section>
@@ -317,6 +324,26 @@ import documents from '../assets/gallery/documents.webp';
         📩 Trimite solicitare
     </a>
 </section>
+
+<!-- DISCLAIMER -->
+<footer class="bg-gray-900 text-gray-400 py-10">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+
+        <p class="text-white font-semibold mb-2">
+            Centrul de Daune Cluj
+        </p>
+
+        <p>
+            Constatare daune auto, dosare RCA și CASCO,
+            mașină la schimb și suport juridic în Cluj-Napoca.
+        </p>
+
+        <p class="mt-4">
+            © 2026 Centrul de Daune Cluj
+        </p>
+
+    </div>
+</footer>
 
 </body>
 </html>
