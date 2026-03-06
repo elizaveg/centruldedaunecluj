@@ -1,0 +1,609 @@
+---
+import '../styles/global.css';
+import herocar from '../assets/hero-car.jpeg';
+import logo from '../../public/assets/logo.jpeg';
+import handshake from '../assets/gallery/handshake.webp';
+---
+
+<html lang="ro">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Constatare Daune Auto Cluj | Dosar Daună RCA & CASCO</title>
+	<meta name="description" content="Ai accident auto în Cluj-Napoca? Te ajutăm cu constatare daune, dosar RCA sau CASCO, mașină la schimb și despăgubiri corecte." />
+	<link rel="canonical" href="https://centruldedaunecluj.ro/" />
+	<meta property="og:title" content="Centrul de Daune Auto Cluj" />
+	<meta property="og:description" content="Ai accident auto în Cluj-Napoca? Te ajutăm cu constatare daune, dosar RCA/CASCO și mașină la schimb. Consultanță gratuită." />
+	<meta property="og:image" content="https://centruldedaunecluj.ro/social-preview.jpg" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://centruldedaunecluj.ro/" />
+
+	<!-- SEO Local JSON-LD -->
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "LocalBusiness",
+			"name": "Centrul De Daune Cluj",
+			"address": {
+				"@type": "PostalAddress",
+				"streetAddress": "Str. Soporului 8",
+				"addressLocality": "Cluj-Napoca",
+				"postalCode": "400000",
+				"addressCountry": "RO"
+			},
+			"telephone": "+40743058942",
+			"url": "https://centruldedaunecluj.ro",
+			"priceRange": "0",
+			"sameAs": ["https://www.facebook.com/centruldedaunecluj"]
+		}
+	</script>
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "FAQPage",
+			"mainEntity": [
+				{
+					"@type": "Question",
+					"name": "Ce trebuie să fac după un accident auto?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "După accident trebuie completat formularul de constatare amiabilă sau anunțată poliția, apoi se deschide dosarul de daună la asigurator. Echipa noastră te ajută cu întocmirea documentelor și gestionarea procesului."
+					}
+				},
+				{
+					"@type": "Question",
+					"name": "Cât durează constatarea daunelor auto?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "Constatarea daunelor poate dura între 24 și 72 de ore, în funcție de asigurator și complexitatea cazului."
+					}
+				},
+				{
+					"@type": "Question",
+					"name": "Pot primi mașină la schimb?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "Da, dacă nu ești vinovat de accident, ai dreptul legal la mașină la schimb pe perioada reparației."
+					}
+				}
+			]
+		}
+	</script>
+</head>
+<body class="font-sans bg-gray-50 text-gray-900 pt-20">
+
+<!-- HEADER -->
+<header class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md shadow-md z-50">
+	<div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+		<!-- LOGO -->
+		<a href="/" class="flex items-center space-x-3">
+			<img src={logo.src} alt="Constatare daune auto Cluj – Centrul de Daune" class="h-10 md:h-16 w-auto" />
+			<span class="font-bold text-xl text-blue-900">Centrul De Daune Cluj</span>
+		</a>
+
+		<!-- MENIU DESKTOP -->
+		<nav class="hidden md:flex space-x-8 font-medium">
+			<a href="/" class="hover:text-blue-600 transition">Home</a>
+			<a href="#servicii" class="hover:text-blue-600 transition">Servicii</a>
+			<a href="/intocmire-dosar-dauna-cluj" class="hover:text-blue-600 transition">Întocmire dosar daună</a>
+			<a href="/masina-la-schimb-cluj" class="hover:text-blue-600 transition">Mașină la schimb</a>
+			<a href="#despre" class="hover:text-blue-600 transition">Despre noi</a>
+			<a href="#contact" class="hover:text-blue-600 transition">Contact</a>
+		</nav>
+
+		<!-- BURGER MENU MOBILE -->
+		<div class="md:hidden">
+			<button id="mobile-menu-button" class="text-gray-700 focus:outline-none">
+				<svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+				</svg>
+			</button>
+		</div>
+	</div>
+
+	<!-- MOBILE MENU (hidden by default) -->
+	<nav id="mobile-menu" class="hidden md:hidden bg-white shadow-md absolute top-full left-0 w-full">
+		<div class="flex flex-col p-4 space-y-4">
+			<a href="/" class="hover:text-blue-600 transition">Home</a>
+			<a href="#servicii" class="hover:text-blue-600 transition">Servicii</a>
+			<a href="/intocmire-dosar-dauna-cluj" class="hover:text-blue-600 transition">Întocmire dosar daună</a>
+			<a href="/masina-la-schimb-cluj" class="hover:text-blue-600 transition">Mașină la schimb</a>
+			<a href="#despre" class="hover:text-blue-600 transition">Despre noi</a>
+			<a href="#contact" class="hover:text-blue-600 transition">Contact</a>
+		</div>
+	</nav>
+</header>
+
+<script>
+	// Toggle Mobile Menu
+	const btn = document.getElementById('mobile-menu-button');
+	const menu = document.getElementById('mobile-menu');
+
+	btn.addEventListener('click', () => {
+		menu.classList.toggle('hidden');
+	});
+
+	// Close Menu
+	document.addEventListener('click', (event) => {
+		const isClickInsideMenu = menu.contains(event.target);
+		const isClickOnButton = btn.contains(event.target);
+
+		if (!isClickInsideMenu && !isClickOnButton) {
+			menu.classList.add('hidden');
+		}
+	});
+</script>
+
+<!-- Sticky WhatsApp Button -->
+<a href="https://wa.me/40743058942 " class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-5 rounded-full shadow-xl transition transform hover:scale-110 z-50">
+	📩 Contact rapid
+</a>
+
+<!-- HERO -->
+<section id="home" class="relative bg-blue-900 text-white h-[60vh] flex items-center justify-center">
+	<img src={herocar.src} alt="Centrul de daune auto din Cluj-Napoca – constatare RCA" class="absolute inset-0 w-full h-full object-cover opacity-30" loading="eager" decoding="async"/>
+
+	<div class="relative z-10 text-center px-4">
+		<h1 class="text-4xl sm:text-5xl font-extrabold mb-4 leading-tight">
+			Centrul de Daune Auto din Cluj-Napoca – Fără Stres și Fără Costuri
+		</h1>
+
+		<p class="text-lg sm:text-xl mb-8">
+			Consultanță completă pentru dosare de daună RCA și CASCO în Cluj-Napoca
+		</p>
+
+		<!-- CTA BUTTONS -->
+		<div class="flex flex-col sm:flex-row gap-4 justify-center">
+
+			<a href="tel:+40743058942"
+			   class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-lg shadow-lg transition">
+				📞 Sună acum
+			</a>
+
+			<a href="https://wa.me/40743058942"
+			   class="bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-4 rounded-lg shadow-lg transition">
+				💬 WhatsApp rapid
+			</a>
+
+		</div>
+
+	</div>
+</section>
+
+<!-- PROCES ACCIDENT AUTO -->
+<section class="py-20 px-4 max-w-6xl mx-auto">
+
+	<h2 class="text-3xl font-bold text-center mb-6">
+		Ce trebuie să faci după un accident auto în Cluj-Napoca
+	</h2>
+
+	<p class="text-center text-gray-600 max-w-3xl mx-auto mb-12">
+		Dacă ai fost implicat într-un accident rutier, este important să urmezi pașii corecți
+		pentru deschiderea dosarului de daună și obținerea despăgubirii. Echipa noastră
+		de la <strong>Centrul de Daune Cluj</strong> te ajută să gestionezi rapid procesul
+		de <a href="/constatare-daune-auto-cluj" class="text-blue-600 underline">constatare a daunelor auto în Cluj</a>,
+		fără drumuri inutile și fără birocrație.
+	</p>
+	<div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition">
+		<h3 class="text-xl font-semibold mb-3">
+			Constatare Daune Auto Cluj
+		</h3>
+
+		<p class="text-gray-600">
+			Constatarea daunelor și deschiderea dosarului RCA sau CASCO
+			cu suport complet din partea echipei noastre.
+		</p>
+
+		<a href="/constatare-daune-auto-cluj"
+		   class="text-blue-600 font-semibold mt-3 inline-block">
+			Află mai multe →
+		</a>
+	</div>
+	<br >
+
+	<div class="grid gap-10 sm:grid-cols-3">
+
+		<!-- PAS 1 -->
+		<div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition">
+			<h3 class="text-xl font-semibold mb-3">
+				1. Contactează-ne imediat după accident
+			</h3>
+
+			<p class="text-gray-600">
+				După producerea accidentului, ne poți trimite fotografii cu
+				avariile mașinii și documentele disponibile. Îți explicăm
+				ce acte sunt necesare și te ghidăm pentru
+				deschiderea corectă a dosarului de daună RCA sau CASCO.
+			</p>
+
+			<p class="text-gray-600 mt-3">
+				Află mai multe despre
+				<a href="/intocmire-dosar-dauna-cluj" class="text-blue-600 underline">
+					întocmirea dosarului de daună
+				</a>.
+			</p>
+		</div>
+
+		<!-- PAS 2 -->
+		<div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition">
+			<h3 class="text-xl font-semibold mb-3">
+				2. Analizăm și pregătim documentația
+			</h3>
+
+			<p class="text-gray-600">
+				Inspectorul nostru verifică documentele și constatarea
+				daunelor pentru a evita problemele cu asiguratorul.
+				Ne ocupăm de completarea formularelor și de
+				comunicarea cu compania de asigurări.
+			</p>
+
+			<p class="text-gray-600 mt-3">
+				Serviciul nostru de
+				<a href="/constatare-daune-auto-cluj" class="text-blue-600 underline">
+					constatare daune auto în Cluj-Napoca
+				</a>
+				te ajută să obții evaluarea corectă a pagubelor.
+			</p>
+		</div>
+
+		<!-- PAS 3 -->
+		<div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition">
+			<h3 class="text-xl font-semibold mb-3">
+				3. Reparăm mașina și urmărim despăgubirea
+			</h3>
+
+			<p class="text-gray-600">
+				Te direcționăm către un service partener autorizat,
+				iar dacă este necesar te ajutăm să obții
+				<a href="/masina-la-schimb-cluj" class="text-blue-600 underline">
+					mașină la schimb pe perioada reparației
+				</a>.
+			</p>
+
+			<p class="text-gray-600 mt-3">
+				Monitorizăm întreg procesul până la finalizarea
+				reparației și plata despăgubirii.
+			</p>
+		</div>
+
+	</div>
+
+</section>
+
+<!-- De ce să ne alegi -->
+<section class="py-16 bg-white">
+	<div class="max-w-6xl mx-auto px-4">
+
+		<h2 class="text-3xl font-bold text-center mb-10">
+			De ce să alegi Centrul de Daune Auto Cluj?
+		</h2>
+
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+
+			<!-- Card 1 -->
+			<div class="p-6 rounded-xl shadow-md hover:shadow-lg transition">
+				<div class="text-4xl mb-4">⚡</div>
+				<h3 class="text-xl font-semibold mb-2">
+					Rapid și Fără Stres
+				</h3>
+				<p class="text-gray-600">
+					Ne ocupăm integral de dosarul tău de daună,
+					fără drumuri și fără birocrație.
+				</p>
+			</div>
+
+			<!-- Card 2 -->
+			<div class="p-6 rounded-xl shadow-md hover:shadow-lg transition">
+				<div class="text-4xl mb-4">🤝</div>
+				<h3 class="text-xl font-semibold mb-2">
+					Consultanță Gratuită
+				</h3>
+				<p class="text-gray-600">
+					Serviciile noastre sunt gratuite pentru clienți.
+					Suntem plătiți de service-urile partenere.
+				</p>
+			</div>
+
+			<!-- Card 3 -->
+			<div class="p-6 rounded-xl shadow-md hover:shadow-lg transition">
+				<div class="text-4xl mb-4">⚖️</div>
+				<h3 class="text-xl font-semibold mb-2">
+					Suport Juridic
+				</h3>
+				<p class="text-gray-600">
+					Colaborăm cu avocat specializat pentru cazuri
+					cu vătămări corporale și despăgubiri.
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Cum Te Ajutăm Concret -->
+<section class="py-20 bg-gray-50">
+	<div class="max-w-6xl mx-auto px-4">
+
+		<h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+			Cum Te Ajutăm Concret
+		</h2>
+
+		<div class="grid md:grid-cols-2 gap-12 items-center">
+
+			<!-- IMAGINE -->
+			<div>
+				<img
+					src={handshake.src}
+					alt="Gestionare dosar daună auto Cluj"
+					class="rounded-2xl shadow-xl w-full object-cover"
+					loading="lazy"
+				/>
+			</div>
+
+			<!-- TEXT -->
+			<div class="text-gray-700 text-lg leading-relaxed space-y-6">
+
+				<p>
+					Oferim suport complet pentru gestionarea dosarului de daună auto în
+					Cluj-Napoca, de la constatarea daunelor până la finalizarea
+					reparației și obținerea despăgubirii corecte.
+				</p>
+
+				<p>
+					Ne ocupăm de documentație, comunicarea cu asiguratorul,
+					verificarea devizului și monitorizarea procesului pentru a evita
+					întârzieri sau respingeri nejustificate.
+				</p>
+
+				<p>
+					În caz de accident cu vătămări corporale sau situații complexe,
+					beneficiezi de suport juridic prin colaboratori specializați
+					pentru a obține despăgubirea maximă conform legislației.
+				</p>
+
+				<p class="font-semibold text-blue-900">
+					Scopul nostru este să reducem stresul și birocrația —
+					noi gestionăm tot procesul pentru tine.
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- SERVICII -->
+<section id="servicii" class="py-20 bg-gray-50">
+	<div class="max-w-7xl mx-auto px-4">
+
+		<h2 class="text-3xl md:text-4xl font-bold text-center mb-4">
+			Serviciile Noastre
+		</h2>
+
+		<p class="text-center text-gray-600 max-w-3xl mx-auto mb-14">
+			Oferim suport complet pentru gestionarea dosarului de daună auto
+			în Cluj-Napoca, de la primul telefon până la finalizarea reparației.
+		</p>
+
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+			<!-- 1 -->
+			<div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition">
+				<h3 class="text-xl font-semibold mb-3">Consultanță în Daune Auto</h3>
+				<p class="text-gray-600">
+					Îți explicăm pașii corecți după accident și te ghidăm
+					pentru obținerea despăgubirii corecte.
+				</p>
+			</div>
+
+			<!-- 2 -->
+			<div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition">
+				<h3 class="text-xl font-semibold mb-3">Întocmire Dosar de Daună</h3>
+				<p class="text-gray-600">
+					Ne ocupăm de completarea și depunerea documentelor,
+					comunicarea cu asiguratorul și urmărirea dosarului.
+				</p>
+			</div>
+
+			<!-- 3 -->
+			<div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition">
+				<h3 class="text-xl font-semibold mb-3">Programare în Service Partener</h3>
+				<p class="text-gray-600">
+					Te direcționăm către service autorizat și monitorizăm
+					reparația până la finalizare.
+				</p>
+			</div>
+
+			<!-- 4 -->
+			<div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition">
+				<h3 class="text-xl font-semibold mb-3">Platformă Auto la Necesitate</h3>
+				<p class="text-gray-600">
+					Asigurăm transportul autoturismului avariat
+					către service, rapid și sigur.
+				</p>
+			</div>
+
+			<!-- 5 -->
+			<div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition">
+				<h3 class="text-xl font-semibold mb-3">Mașină la Schimb</h3>
+				<p class="text-gray-600">
+					Te ajutăm să obții mașină la schimb pe perioada
+					reparației, conform drepturilor legale.
+				</p>
+			</div>
+
+			<!-- 6 -->
+			<div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition">
+				<h3 class="text-xl font-semibold mb-3">Asistență Juridică</h3>
+				<p class="text-gray-600">
+					Colaborăm cu avocat specializat în accidente rutiere
+					și despăgubiri pentru cazuri complexe sau vătămări corporale.
+				</p>
+			</div>
+
+			<!-- 7 -->
+			<div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition">
+				<h3 class="text-xl font-semibold mb-3">Negociere Despăgubire</h3>
+				<p class="text-gray-600">
+					Verificăm oferta asiguratorului și intervenim dacă
+					despăgubirea nu reflectă corect valoarea reparației.
+				</p>
+			</div>
+
+			<!-- 8 -->
+			<div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition">
+				<h3 class="text-xl font-semibold mb-3">Dosare Vătămări Corporale</h3>
+				<p class="text-gray-600">
+					Gestionăm dosarele pentru victimele accidentelor rutiere
+					în vederea obținerii despăgubirilor legale.
+				</p>
+			</div>
+
+			<!-- 9 -->
+			<div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition">
+				<h3 class="text-xl font-semibold mb-3">Suport Complet până la Final</h3>
+				<p class="text-gray-600">
+					Monitorizăm întreg procesul până când mașina este reparată
+					și despăgubirea este plătită.
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- ECHIPA -->
+<section id="despre"  class="py-20 px-4 max-w-6xl mx-auto text-center">
+	<h2 class="text-3xl font-bold mb-12">Echipa noastră de specialiști în daune auto din Cluj</h2>
+	<div class="grid gap-8 sm:grid-cols-3">
+		<div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
+			<img src="/assets/team/dragos.jpeg" alt="Dragos Goron" class="w-32 h-32 mx-auto rounded-full mb-4 object-cover" loading="lazy" decoding="async"/>
+			<h3 class="text-xl font-semibold mb-2">Dragoș Goron</h3>
+			<p>Inspector daune auto | Co-fondator</p>
+			<p class="mt-2 text-gray-600">Peste 10 ani de experiență în gestionarea dosarelor de daună.</p>
+		</div>
+		<div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
+			<img src="/assets/team/maria.jpeg" alt="Maria Posteuca" class="w-32 h-32 mx-auto rounded-full mb-4 object-cover" loading="lazy" decoding="async"/>
+			<h3 class="text-xl font-semibold mb-2">Maria Marioara</h3>
+			<p>Avocat colaborator | Drept civil & vătămări corporale</p>
+			<p class="mt-2 text-gray-600">Specializată în obținerea despăgubirilor pentru victimele accidentelor rutiere.</p>
+		</div>
+		<div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
+			<img src="/assets/team/maria.jpeg" alt="Maria Posteuca" class="w-32 h-32 mx-auto rounded-full mb-4 object-cover" loading="lazy" decoding="async"/>
+			<h3 class="text-xl font-semibold mb-2">Mihai Ionescu</h3>
+			<p>Consultant digital | Co-fondator</p>
+			<p class="mt-2 text-gray-600">Responsabil de comunicare și relația cu clienții.</p>
+		</div>
+	</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="relative bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20 px-4 sm:px-8 text-center">
+	<h2 class="text-3xl sm:text-4xl font-bold mb-6">Contactează-ne acum</h2>
+	<p class="mb-6 text-lg sm:text-xl">Str. Soporului nr. 8, Cluj-Napoca<br />0743 058 942 | contact@centruldedaunecluj.ro</p>
+	<p class="mb-8 text-lg sm:text-xl">Program: Luni – Vineri: 09:00 – 18:00</p>
+	<a href="https://wa.me/40743058942" class="bg-green-500 hover:bg-green-600 transition duration-300 px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl inline-block animate-pulse sm:animate-none">
+		📩 Trimite solicitare
+	</a></section>
+
+<!-- FAQ -->
+<section class="py-20 bg-white">
+	<div class="max-w-5xl mx-auto px-4">
+		<h2 class="text-3xl font-bold text-center mb-12">
+			Întrebări frecvente despre dosarele de daună auto
+		</h2>
+
+		<div class="space-y-4">
+
+			<!-- Accordion Item -->
+			<details class="bg-gray-50 rounded-xl shadow-sm p-6 cursor-pointer group">
+				<summary class="font-semibold text-lg flex justify-between items-center">
+					Cât costă serviciile de constatare și dosar daună?
+					<span class="text-2xl group-open:rotate-45 transition-transform">+</span>
+				</summary>
+				<p class="text-gray-600 mt-4">
+					Serviciile noastre sunt gratuite pentru client. Suntem remunerați prin partenerii noștri (service-uri auto), astfel încât nu plătești nimic pentru consultanță.
+				</p>
+			</details>
+
+			<details class="bg-gray-50 rounded-xl shadow-sm p-6 cursor-pointer group">
+				<summary class="font-semibold text-lg flex justify-between items-center">
+					Pot obține mașină la schimb?
+					<span class="text-2xl group-open:rotate-45 transition-transform">+</span>
+				</summary>
+				<p class="text-gray-600 mt-4">
+					Da. Te ajutăm să obții mașină la schimb pe perioada reparației, conform drepturilor prevăzute de polița RCA sau CASCO.
+				</p>
+			</details>
+
+			<details class="bg-gray-50 rounded-xl shadow-sm p-6 cursor-pointer group">
+				<summary class="font-semibold text-lg flex justify-between items-center">
+					Cât durează un dosar de daună?
+					<span class="text-2xl group-open:rotate-45 transition-transform">+</span>
+				</summary>
+				<p class="text-gray-600 mt-4">
+					Durata depinde de complexitate și de asigurator. Noi urmărim activ dosarul pentru a accelera aprobarea și plata despăgubirii.
+				</p>
+			</details>
+
+			<details class="bg-gray-50 rounded-xl shadow-sm p-6 cursor-pointer group">
+				<summary class="font-semibold text-lg flex justify-between items-center">
+					Ajutați și în caz de vătămare corporală?
+					<span class="text-2xl group-open:rotate-45 transition-transform">+</span>
+				</summary>
+				<p class="text-gray-600 mt-4">
+					Da. Colaborăm cu avocat specializat pentru obținerea despăgubirilor în caz de vătămări corporale sau accidente grave.
+				</p>
+			</details>
+
+		</div>
+	</div>
+</section>
+
+<!-- DISCLAIMER -->
+<footer class="bg-gray-900 text-gray-400 py-10">
+	<div class="max-w-6xl mx-auto px-4 text-center">
+
+		<p class="text-white font-semibold mb-2">
+			Centrul de Daune Cluj
+		</p>
+
+		<p>
+			Constatare daune auto, dosare RCA și CASCO,
+			mașină la schimb și suport juridic în Cluj-Napoca.
+		</p>
+
+		<!-- Social media -->
+		<div class="flex justify-center gap-6 mt-6">
+
+			<!-- Facebook -->
+			<a href="https://facebook.com" target="_blank" aria-label="Facebook">
+				<svg class="w-6 h-6 hover:text-white transition" fill="currentColor" viewBox="0 0 24 24">
+					<path d="M22 12a10 10 0 10-11.5 9.87v-6.99H7.9v-2.88h2.6V9.41c0-2.56 1.52-3.97 3.84-3.97
+          1.11 0 2.27.2 2.27.2v2.5h-1.28c-1.26 0-1.65.78-1.65 1.58v1.9h2.81l-.45
+          2.88h-2.36v6.99A10 10 0 0022 12z"/>
+				</svg>
+			</a>
+
+			<!-- Instagram -->
+			<a href="https://instagram.com" target="_blank" aria-label="Instagram">
+				<svg class="w-6 h-6 hover:text-white transition" fill="currentColor" viewBox="0 0 24 24">
+					<path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75
+          5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm4.25 5a5 5 0 100 10 5 5 0 000-10zm6.25-.88a1.13
+          1.13 0 11-2.25 0 1.13 1.13 0 012.25 0zM12 9.5A2.5 2.5 0 1112 14.5 2.5 2.5 0 0112 9.5z"/>
+				</svg>
+			</a>
+
+			<!-- TikTok -->
+			<a href="https://tiktok.com" target="_blank" aria-label="TikTok">
+				<svg class="w-6 h-6 hover:text-white transition" fill="currentColor" viewBox="0 0 24 24">
+					<path d="M21 8.29a7.46 7.46 0 01-4.3-1.36v6.09a5.34 5.34 0 11-4.64-5.29v2.3a3.06
+          3.06 0 102.18 2.93V2h2.46a5 5 0 004.3 4.29z"/>
+				</svg>
+			</a>
+
+		</div>
+
+		<p class="mt-6">
+			© 2026 Centrul de Daune Cluj
+		</p>
+	</div>
+</footer>
+</body>
+</html>
